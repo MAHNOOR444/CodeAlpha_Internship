@@ -1,0 +1,53 @@
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+.Img_Gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    padding: 10px;
+}
+
+.Img_Gallery img {
+    width: calc(100% / 4 - 20px); /* Adjust the width as needed */
+    max-width: 250px; /* You can increase this value to make images larger */
+    height: auto;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.Img_Gallery img:hover {
+    transform: scale(1.05);
+}
+
+.full-img {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 10;
+}
+
+.full-img img {
+    max-width: 90%;
+    max-height: 90%;
+}
+
+.full-img span {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 50px;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+}
